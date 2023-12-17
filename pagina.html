@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA_Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NunesSports</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="superEspecial">
+        <h2 class="tituloEmpresa">Nunes Sports</h2>
+            <div class="sublinha">
+                <div class="linha">
+                    <div class="grupoTabela">
+                        <label for="nomeProduto">Nome do produto</label>
+                       <input 
+                        type="text" 
+                        name="nome"
+                        class="controle"
+                        id="nome"
+                        placeholder="Digite o nome do produto"
+                       />
+                    </div>
+                    <div class="grupoTabela">
+                        <label for="codigoProduto">Codigo do produto</label>
+                       <input 
+                        type="number"
+                        name="codigo"
+                        class="controle"
+                        id="codigo"
+                        placeholder="Digite o codigo do produto"
+                       />
+                    </div>
+                    <div class="grupoTabela">
+                        <label for="descricaoProduto">Descrição do produto</label>
+                       <input 
+                        type="text" 
+                        name="descricao"
+                        class="controle"
+                        id="descricao"
+                        placeholder="Digite a descricao do produto"
+                       />
+                    </div>
+                    <div class="grupoTabela">
+                        <label for="precoProduto">Preço do produto</label>
+                       <input 
+                        type="number" 
+                        name="preco"
+                        class="controle"
+                        id="preco"
+                        placeholder="Digite o preço do produto"
+                       />
+                    </div>
+                    <div class="botaoClicado">
+                        <button class="btn btn-success" id="Submit"
+                        onclick="AddData()">
+                            Adicionar
+                        </button>
+                    <div class="botaoClicado">
+                        <button class="btn btn-primary" id="Submit"
+                        onclick="AddData()">
+                            Atualizar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="linha1">
+                <div class="traco">
+                    <table class="traco1"></table>
+                </div>
+            </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
