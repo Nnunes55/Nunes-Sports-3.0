@@ -1,81 +1,108 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA_Compatible" content="IE-edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NunesSports</title>
-    <link rel="stylesheet" href="estilo.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-<body>
-    <div class="superEspecial">
-        <h2 class="tituloEmpresa">Nunes Sports</h2>
-            <div class="sublinha">
-                <div class="linha">
-                    <div class="grupoTabela">
-                        <label for="nomeProduto">Nome do produto</label>
-                       <input 
-                        type="text" 
-                        name="nome"
-                        class="controle"
-                        id="nome"
-                        placeholder="Digite o nome do produto"
-                       />
-                    </div>
-                    <div class="grupoTabela">
-                        <label for="codigoProduto">Codigo do produto</label>
-                       <input 
-                        type="number"
-                        name="codigo"
-                        class="controle"
-                        id="codigo"
-                        placeholder="Digite o codigo do produto"
-                       />
-                    </div>
-                    <div class="grupoTabela">
-                        <label for="descricaoProduto">Descrição do produto</label>
-                       <input 
-                        type="text" 
-                        name="descricao"
-                        class="controle"
-                        id="descricao"
-                        placeholder="Digite a descricao do produto"
-                       />
-                    </div>
-                    <div class="grupoTabela">
-                        <label for="precoProduto">Preço do produto</label>
-                       <input 
-                        type="number" 
-                        name="preco"
-                        class="controle"
-                        id="preco"
-                        placeholder="Digite o preço do produto"
-                       />
-                    </div>
-                    <div class="botaoClicado">
-                        <button class="btn btn-success" id="Submit"
-                        onclick="AddData()">
-                            Adicionar
-                        </button>
-                    <div class="botaoClicado">
-                        <button class="btn btn-primary" id="Submit"
-                        onclick="AddData()">
-                            Atualizar
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="linha1">
-                <div class="traco">
-                    <table class="traco1"></table>
-                </div>
-            </div>
-    </div>
-    
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="script.js"></script>
-</body>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    <title>NunesSport</title>
+
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+    <h1>Nunes Sport<h1>
+
+        <section class="p-3">
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userForm">Novo Usuario <i class="bi bi-people"></i></button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <table class="table table-striped table-hover mt-3 text-center table-bordered">
+
+                        <thead>
+                            <tr>
+                                <th>Posição na Lista</th>
+                                <th>Nome do Produto</th>
+                                <th>Código do Produto</th>
+                                <th>Descrição do Produto</th>
+                                <th>Preço do Produto</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="data">
+                            <td>1</td>
+                            <td>Coca Cola</td>
+                            <td>1254846165</td>
+                            <td>Uma lata de coca cola para beber</td>
+                            <td>4,00</td>
+                            <td>
+                                <button class="btn btn-success"><i class="bi bi-eye"></i></button>
+                                <button class="btn btn-primary"><i class="bi bi-pemcil-square"></i></button>
+                                <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tbody>
+
+                        <tbody id="data">
+                            <td>2</td>
+                            <td>Coca Cola</td>
+                            <td>1254846165</td>
+                            <td>Uma lata de coca cola para beber</td>
+                            <td>4,00</td>
+                            <td>
+                                <button class="btn btn-success"><i class="bi bi-eye"></i></button>
+                                <button class="btn btn-primary"><i class="bi bi-pemcil-square"></i></button>
+                                <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tbody>
+
+                        <tbody id="data">
+                            <td>3</td>
+                            <td>Coca Cola</td>
+                            <td>1254846165</td>
+                            <td>Uma lata de coca cola para beber</td>
+                            <td>4,00</td>
+                            <td>
+                                <button class="btn btn-success"><i class="bi bi-eye"></i></button>
+                                <button class="btn btn-primary"><i class="bi bi-pemcil-square"></i></button>
+                                <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal fade" id="userForm">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h4 class="modal-title">fill the form</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <form action="#" id="myForm"></form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   <script src="script.js"></script>
+  </body>
 </html>
