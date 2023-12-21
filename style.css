@@ -1,0 +1,50 @@
+body{
+    background: rgba(10, 37, 190, 0.363);
+}
+table tr td{
+    vertical-align: middle;
+}
+
+td button{
+    margin: 5px;
+}
+
+.modal-header{
+    background: #aceb00;
+    color: #fff;
+}
+
+button i{
+    font-size: 20px;
+}
+
+.modal-body form{
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.modal-body form .inputField{
+    flex-basis: 68%;
+    border-left: 5px groove rgba(10, 37, 190, 0.363);
+    padding-left: 20px;
+}
+
+form .inputField > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: 20px;
+
+}
+
+form .inputField > div label{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#userForm form .inputField > div label::after{
+    content: "*";
+    color: red;
+}
