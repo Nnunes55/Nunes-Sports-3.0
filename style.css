@@ -1,17 +1,18 @@
-body{
-    background: rgba(10, 37, 190, 0.363);
+.app{
+    background: #12CBB2;
 }
-table tr td{
+
+table tr td {
     vertical-align: middle;
 }
 
 td button{
-    margin: 5px;
+    margin: 2px;
 }
 
 .modal-header{
-    background: #aceb00;
-    color: #fff;
+    background: #12CBB2;
+    color: #ffffff;
 }
 
 button i{
@@ -21,21 +22,22 @@ button i{
 .modal-body form{
     display: flex;
     justify-content:space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 0;
 }
 
 .modal-body form .inputField{
-    flex-basis: 68%;
-    border-left: 5px groove rgba(10, 37, 190, 0.363);
-    padding-left: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
 }
 
 form .inputField > div{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: 20px;
+    align-items: center;
 
 }
 
@@ -44,7 +46,11 @@ form .inputField > div label{
     font-weight: 500;
 }
 
-#userForm form .inputField > div label::after{
-    content: "*";
-    color: red;
+.modal-footer .submit{
+    font-size: 20px;
+}
+
+#readData form .inputField > div input{
+    color: #000000;
+    font-size: 18px;
 }
