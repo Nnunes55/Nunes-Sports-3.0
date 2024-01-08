@@ -30,7 +30,7 @@ function showInfo() {
                 <td>${element.productName}</td>
                 <td>${element.productCodigo}</td>
                 <td>${element.productDescricao}</td>
-                <td>${element.productPreco}</td>
+                <td>R$${element.productPreco}</td>
 
                 <td>
                     <button class="btn btn-success" onclick="readInfo('${
