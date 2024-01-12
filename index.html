@@ -27,24 +27,29 @@
       <!-- As a heading -->
       <nav class="navbar bg-info bg-gradient">
         <div class="container-fluid">
-          <h1 class="navbar-brand mb-0  h1">Nunes Sport</h1>
+          <h1 class="navbar-brand mb-0 h1">Nunes Sport</h1>
         </div>
       </nav>
     </header>
     <main class="container-fluid px-5 pt-2">
-      <section class="p-3 bg-body-secondary  mt-4 rounded">
+      <section class="p-3 bg-body-secondary mt-4 rounded">
         <div class="row">
           <div class="col">
-            <button
-              class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#userForm"
-            >
-              Novo Produto <i class="bi bi-people"></i>
+            <button class="btn bg-success btn-outline-light" id="">
+              Adiministrativo <i class="bi bi-people"></i>
             </button>
           </div>
           <div class="col">
-            <button class="btn btn-outline-secondary" id="logout">
+            <button
+              class="btn bg-primary btn-outline-light"
+              data-bs-toggle="modal"
+              data-bs-target="#userForm"
+            >
+              Novo Produto <i class="bi bi-bag-plus"></i>
+            </button>
+          </div>
+          <div class="col">
+            <button class="btn bg-danger btn-outline-light" id="logout">
               Sair <i class="bi bi-people"></i>
             </button>
           </div>
@@ -85,24 +90,24 @@
               ></button>
             </div>
 
-            <div class="modal-body">
+            <div class="modal-bod">
               <form action="#" id="myForm">
                 <div class="inputFild">
-                  <div>
+                  <div class="mt-2">
                     <label for="name">Nome do Produto:</label>
-                    <input type="text" name="" id="name" required />
+                    <input class="container text-center" type="text" name="" id="name" required />
                   </div>
-                  <div>
+                  <div class="mt-2">
                     <label for="codigo">Código do Produto:</label>
-                    <input type="number" name="" id="codigo" required />
+                    <input class="container text-center" type="number" name="" id="codigo" required />
                   </div>
-                  <div>
+                  <div class="mt-2">
                     <label for="descricao">Descrição do Produto:</label>
-                    <input type="text" name="" id="descricao" required />
+                    <input class="container text-center" type="text" name="" id="descricao" required />
                   </div>
-                  <div>
+                  <div class="mt-2">
                     <label for="preco">Preço do Produto:</label>
-                    <input type="number" name="" id="preco" required />
+                    <input class="container text-center" type="number" name="" id="preco" required />
                   </div>
                 </div>
               </form>
@@ -137,21 +142,21 @@
             <div class="modal-body">
               <form action="#" id="myForm">
                 <div class="inputFild">
-                  <div>
+                  <div class="mt-2">
                     <label for="name">Nome do Produto:</label>
-                    <input type="text" name="" id="showName" disabled />
+                    <input class="container text-center" type="text" name="" id="showName" disabled />
                   </div>
-                  <div>
+                  <div class="mt-2">
                     <label for="codigo">Código do Produto:</label>
-                    <input type="number" name="" id="showCodigo" disabled />
+                    <input class="container text-center" type="number" name="" id="showCodigo" disabled />
                   </div>
-                  <div>
+                  <div class="mt-2">
                     <label for="descricao">Descrição do Produto:</label>
-                    <input type="text" name="" id="showDescricao" disabled />
+                    <input class="container text-center" type="text" name="" id="showDescricao" disabled />
                   </div>
-                  <div>
+                  <div class="mt-2">
                     <label for="preco">Preço do Produto:</label>
-                    <input type="number" name="" id="showPreco" disabled />
+                    <input class="container text-center" type="number" name="" id="showPreco" disabled />
                   </div>
                 </div>
               </form>
