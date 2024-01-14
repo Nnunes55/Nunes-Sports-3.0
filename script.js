@@ -8,6 +8,7 @@ var form = document.getElementById("myForm"),
   modal = document.getElementById("userForm"),
   modalTitle = document.querySelector("#userForm .modal-title");
 logoutBtn = document.getElementById("logout");
+adm = document.getElementById("adm");
 
 let getData = localStorage.getItem("database")
   ? JSON.parse(localStorage.getItem("database"))
@@ -15,9 +16,8 @@ let getData = localStorage.getItem("database")
 
 let isEdit = false,
   editId;
-  const user = JSON.parse(localStorage.getItem("session")) || {} ;
+const user = JSON.parse(localStorage.getItem("session")) || {};
 function showInfo() {
-  
   document
     .querySelectorAll(".employeeDetails")
     .forEach((info) => info.remove());
