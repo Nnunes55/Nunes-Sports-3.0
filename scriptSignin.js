@@ -30,7 +30,7 @@ form.addEventListener("submit" , (e)=>{
     return alert("O usuario ja está Cadastrado!")
   }
 
-  users.push({email: email, senha: senha, confirmeSenha: confirmeSenha})
+  users.push({ email, senha, confirmeSenha, role: "user"})
   localStorage.setItem('users', JSON.stringify(users))
   alert('Usuario cadastrado com sucesso!')
   window.location.href = 'indexLogin.html'

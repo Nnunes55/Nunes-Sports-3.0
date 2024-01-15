@@ -56,7 +56,7 @@ function showInfo() {
       userInfo.innerHTML += creatElement;
     });
 }
-
+showInfo();
 
 function readInfo(name, codigo, descricao, preco) {
   (document.querySelector("#showName").value = name),
@@ -122,17 +122,5 @@ logoutBtn.addEventListener("click", (e) => {
   localStorage.removeItem("session");
   window.location.href = "indexLogin.html";
 });
-
-adm.addEventListener("click", (e) => {
-  window.location.href = "adm.html";
-});
-
-document.addEventListener("DOMContentLoaded", (e) => {
-  showInfo();
-  if(user.role!=="admin"){
-    adm.parentElement.style.display = "none"
-  }
-
-})
 
 
