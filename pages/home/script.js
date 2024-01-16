@@ -120,11 +120,11 @@ form.addEventListener("submit", (e) => {
 
 logoutBtn.addEventListener("click", (e) => {
   localStorage.removeItem("session");
-  window.location.href = "/indexLogin.html";
+  window.location.href = "index.html";
 });
 
 adm.addEventListener("click", (e) => {
-  window.location.href = "pages/adm";
+  window.location.href = "../adm/index.html";
 });
 
 document.addEventListener("DOMContentLoaded", (e) => {

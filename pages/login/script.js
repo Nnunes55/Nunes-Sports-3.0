@@ -21,5 +21,5 @@ form.addEventListener("submit", (e) => {
 
   alert(`Bem Vindo ${validuser.email}`);
   localStorage.setItem("session", JSON.stringify(validuser));
-  window.location.href = "index.html";
+  window.location.href = "pages/home/index.html";
 });

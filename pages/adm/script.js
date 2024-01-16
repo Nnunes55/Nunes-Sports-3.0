@@ -113,7 +113,7 @@ form.addEventListener("submit", (e) => {
 
 logoutBtn.addEventListener("click", (e) => {
   localStorage.removeItem("session");
-  window.location.href = "/indexLogin.html";
+  window.location.href = "index.html";
 });
 
 

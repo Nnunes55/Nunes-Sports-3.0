@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   const isRegisterPage = [].includes(window.location.pathname)
 
   if (!session.email && isapp) {
-    window.location.href = "indexLogin.html";
+    window.location.href = "index.html";
   }
 
   if (session.email && (isLoginPage || isRegisterPage)) {
