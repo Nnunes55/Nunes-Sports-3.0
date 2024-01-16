@@ -8,10 +8,13 @@ var form = document.getElementById("myForm"),
   modal = document.getElementById("userForm"),
   modalTitle = document.querySelector("#userForm .modal-title");
 logoutBtn = document.getElementById("logout");
-adm = document.getElementById("adm");
 
 let getData = localStorage.getItem("database")
   ? JSON.parse(localStorage.getItem("database"))
+  : [];
+
+const getUsers = localStorage.getItem("users")
+  ? JSON.parse(localStorage.getItem("users"))
   : [];
 
 let isEdit = false,
@@ -22,57 +25,45 @@ function showInfo() {
     .querySelectorAll(".employeeDetails")
     .forEach((info) => info.remove());
 
-  getData
-    .filter((product) => product.createdBy === user.email)
-    .forEach((element, index) => {
-      let creatElement = `<tr class="employeeDetails">
+  getUsers.forEach((element, index) => {
+    let creatElement = `<tr class="employeeDetails">
                 <td>${index + 1}</td>
-                <td>${element.productName}</td>
-                <td>${element.productCodigo}</td>
-                <td>${element.productDescricao}</td>
-                <td>R$${element.productPreco}</td>
+                <td>${element.email}</td>
+                <td>${element.role}</td>
+                
 
+                
                 <td>
                     <button class="btn btn-success" onclick="readInfo('${
-                      element.productName
-                    }', '${element.productCodigo}', 
-                    '${element.productDescricao}', '${
-        element.productPreco
-      }')" data-bs-toggle="modal"
+                      element.email
+                    }', '${element.role}', 
+                    )" data-bs-toggle="modal"
                     data-bs-target="#readData"><i class="bi bi-eye"></i></button>
 
                     <button class="btn btn-primary" onclick="editInfo(${index}, '${
-        element.productName
-      }', '${element.productCodigo}', 
-                    '${element.productDescricao}', '${
-        element.productPreco
-      }')" data-bs-toggle="modal" data-bs-target="#userForm" 
+      element.email
+    }', '${element.role}', 
+                   )" data-bs-toggle="modal" data-bs-target="#userForm" 
                     ><i class="bi bi-pencil-square"></i></button>
 
                     <button class="btn btn-danger" onclick="deleteInfo(${index})"><i class="bi bi-trash"></i></button>
                 </td>
             </tr>`;
 
-      userInfo.innerHTML += creatElement;
-    });
-}
-showInfo();
-
-function readInfo(name, codigo, descricao, preco) {
-  (document.querySelector("#showName").value = name),
-    (document.querySelector("#showCodigo").value = codigo),
-    (document.querySelector("#showDescricao").value = descricao),
-    (document.querySelector("#showPreco").value = preco);
+    userInfo.innerHTML += creatElement;
+  });
 }
 
-function editInfo(index, name, Codigo, Descricao, Preco) {
+function readInfo(email, role) {
+  (document.querySelector("#showEmail").value = email),
+    (document.querySelector("#showRole").value = role)
+}
+
+function editInfo(index, email, role) {
   isEdit = true;
   editId = index;
-  userName.value = name;
-  codigo.value = Codigo;
-  descricao.value = Descricao;
-  preco.value = Preco;
-
+  userName.value = email;
+  codigo.value = role;
   submitBtn.innerText = "Enviar";
   modalTitle.innerText = "Altere os dados";
 }
@@ -89,23 +80,25 @@ function deleteInfo(index) {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-
+  const actualUser = getUsers.find(
+    (user) => user.email === userName.value
+  );
+  console.log(actualUser)
   const information = {
-    createdBy: user.email,
-    productName: userName.value,
-    productCodigo: codigo.value,
-    productDescricao: descricao.value,
-    productPreco: preco.value,
+    email: userName.value,
+    role: codigo.value,
+    senha: actualUser.senha,
+    confirmeSenha: actualUser.confirmeSenha
   };
 
   if (!isEdit) {
-    getData.push(information);
+    getUsers.push(information);
   } else {
     isEdit = false;
-    getData[editId] = information;
+    getUsers[editId] = information;
   }
 
-  localStorage.setItem("database", JSON.stringify(getData));
+  localStorage.setItem("users", JSON.stringify(getUsers));
 
   submitBtn.innerText = "Enviar";
   modalTitle.innerHTML = "preencha o formulário";
@@ -120,7 +113,11 @@ form.addEventListener("submit", (e) => {
 
 logoutBtn.addEventListener("click", (e) => {
   localStorage.removeItem("session");
-  window.location.href = "indexLogin.html";
+  window.location.href = "/indexLogin.html";
 });
 
 
+
+document.addEventListener("DOMContentLoaded", (e) => {
+  showInfo();
+});

@@ -30,8 +30,8 @@ function showInfo() {
                 <td>${element.productName}</td>
                 <td>${element.productCodigo}</td>
                 <td>${element.productDescricao}</td>
-                <td>R$${element.productPreco}</td>
 
+                <td>R$ ${Number(element.productPreco).toLocaleString("pt-br")}</td>
                 <td>
                     <button class="btn btn-success" onclick="readInfo('${
                       element.productName
@@ -120,11 +120,11 @@ form.addEventListener("submit", (e) => {
 
 logoutBtn.addEventListener("click", (e) => {
   localStorage.removeItem("session");
-  window.location.href = "indexLogin.html";
+  window.location.href = "/indexLogin.html";
 });
 
 adm.addEventListener("click", (e) => {
-  window.location.href = "adm.html";
+  window.location.href = "pages/adm";
 });
 
 document.addEventListener("DOMContentLoaded", (e) => {

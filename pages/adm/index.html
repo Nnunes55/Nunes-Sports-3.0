@@ -26,7 +26,7 @@
     <header>
       <!-- As a heading -->
       <nav class="navbar bg-info bg-gradient">
-        <div class="container-fluid ">
+        <div class="container-fluid">
           <h1 class="navbar-brand mb-0 h1">Nunes Sport</h1>
         </div>
       </nav>
@@ -58,10 +58,8 @@
               <thead>
                 <tr>
                   <th>Posição na Lista</th>
-                  <th>Nome do Produto</th>
-                  <th>Código do Produto</th>
-                  <th>Descrição do Produto</th>
-                  <th>Preço do Produto</th>
+                  <th>email</th>
+                  <th>cargo</th>
                   <th>Ações</th>
                 </tr>
               </thead>
@@ -90,19 +88,26 @@
                 <div class="inputFild">
                   <div class="mt-2 m-lg-3">
                     <label for="name">Nome do Produto:</label>
-                    <input class="container text-center" type="text" name="" id="name" required />
+                    <input
+                      class="container text-center"
+                      type="text"
+                      name=""
+                      id="name"
+                      disabled
+                    />
                   </div>
                   <div class="mt-2 m-lg-3">
                     <label for="codigo">Código do Produto:</label>
-                    <input class="container text-center" type="number" name="" id="codigo" required />
-                  </div>
-                  <div class="mt-2 m-lg-3">
-                    <label for="descricao">Descrição do Produto:</label>
-                    <input class="container text-center" type="text" name="" id="descricao" required />
-                  </div>
-                  <div class="mt-2 m-lg-3">
-                    <label for="preco">Preço do Produto:</label>
-                    <input class="container text-center" type="number" name="" id="preco" required />
+
+                    <select
+                    id="codigo"
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Selecione o cargo</option>
+                      <option value="admin">admintrador</option>
+                      <option value="user">usuario</option>
+                    </select>
                   </div>
                 </div>
               </form>
@@ -139,19 +144,43 @@
                 <div class="inputFild">
                   <div class="">
                     <label for="name">Nome do Produto:</label>
-                    <input class="container text-center" type="text" name="" id="showName" disabled />
+                    <input
+                      class="container text-center"
+                      type="text"
+                      name=""
+                      id="showEmail"
+                      disabled
+                    />
                   </div>
                   <div class="">
                     <label for="codigo">Código do Produto:</label>
-                    <input class="container text-center" type="number" name="" id="showCodigo" disabled />
+                    <input
+                      class="container text-center"
+                      type="text"
+                      name=""
+                      id="showRole"
+                      disabled
+                    />
                   </div>
                   <div class="">
                     <label for="descricao">Descrição do Produto:</label>
-                    <input class="container text-center" type="text" name="" id="showDescricao" disabled />
+                    <input
+                      class="container text-center"
+                      type="text"
+                      name=""
+                      id="showDescricao"
+                      disabled
+                    />
                   </div>
                   <div class="">
                     <label for="preco">Preço do Produto:</label>
-                    <input class="container text-center" type="number" name="" id="showPreco" disabled />
+                    <input
+                      class="container text-center"
+                      type="number"
+                      name=""
+                      id="showPreco"
+                      disabled
+                    />
                   </div>
                 </div>
               </form>
@@ -166,7 +195,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./js/checkLogin.js"></script>
+    <script src="../../shared/checkLogin.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
