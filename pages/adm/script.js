@@ -7,7 +7,6 @@ var form = document.getElementById("myForm"),
   userInfo = document.getElementById("data"),
   modal = document.getElementById("userForm"),
   modalTitle = document.querySelector("#userForm .modal-title");
-logoutBtn = document.getElementById("logout");
 
 let getData = localStorage.getItem("database")
   ? JSON.parse(localStorage.getItem("database"))
@@ -110,13 +109,6 @@ form.addEventListener("submit", (e) => {
   modal.style.display = "none";
   document.querySelector(".modal-backdrop").remove();
 });
-
-logoutBtn.addEventListener("click", (e) => {
-  localStorage.removeItem("session");
-  window.location.href = "index.html";
-});
-
-
 
 document.addEventListener("DOMContentLoaded", (e) => {
   showInfo();

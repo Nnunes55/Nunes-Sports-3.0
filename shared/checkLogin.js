@@ -1,20 +1,19 @@
 const session = JSON.parse(localStorage.getItem("session")) || {};
-document.addEventListener("DOMContentLoaded", (e) => {
-  const isapp = [
-    "/index.html",
-    "/Nunes-Sports-3.0/",
-    "/Nunes-Sports-3.0/index.html",
-  ].includes(window.location.pathname);
 
-  const isLoginPage = [].includes(window.location.pathname)
-  const isRegisterPage = [].includes(window.location.pathname)
+document.addEventListener("DOMContentLoaded", (e) => {
+  const isapp = window.location.pathname.includes("pages/adm")
+  || window.location.pathname.includes("pages/home")
+
+  const isLoginPage = window.location.pathname === "/"
+
+  const isRegisterPage = window.location.pathname.includes("pages/signin")
+  
 
   if (!session.email && isapp) {
-    window.location.href = "index.html";
+    window.location.href = "/";
   }
 
-  if (session.email && (isLoginPage || isRegisterPage)) {
-    window.location.href = "index.html";
+    if (session.email && (isLoginPage || isRegisterPage)) {
+    window.location.href = "/pages/home";
   }
 });
-

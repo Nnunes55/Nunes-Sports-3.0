@@ -7,7 +7,6 @@ var form = document.getElementById("myForm"),
   userInfo = document.getElementById("data"),
   modal = document.getElementById("userForm"),
   modalTitle = document.querySelector("#userForm .modal-title");
-logoutBtn = document.getElementById("logout");
 adm = document.getElementById("adm");
 
 let getData = localStorage.getItem("database")
@@ -118,10 +117,7 @@ form.addEventListener("submit", (e) => {
   document.querySelector(".modal-backdrop").remove();
 });
 
-logoutBtn.addEventListener("click", (e) => {
-  localStorage.removeItem("session");
-  window.location.href = "index.html";
-});
+
 
 adm.addEventListener("click", (e) => {
   window.location.href = "../adm/index.html";
