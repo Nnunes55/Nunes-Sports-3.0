@@ -33,5 +33,5 @@ form.addEventListener("submit" , (e)=>{
   users.push({ email, senha, confirmeSenha, role: "user"})
   localStorage.setItem('users', JSON.stringify(users))
   alert('Usuario cadastrado com sucesso!')
-  window.location.href = 'index.html'
+  window.location.href = '/'
 })
