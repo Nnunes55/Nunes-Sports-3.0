@@ -8,6 +8,8 @@ var form = document.getElementById("myForm"),
   modal = document.getElementById("userForm"),
   modalTitle = document.querySelector("#userForm .modal-title");
 
+  const logout1 = document.getElementById("logout1")
+
 let getData = localStorage.getItem("database")
   ? JSON.parse(localStorage.getItem("database"))
   : [];
@@ -113,3 +115,9 @@ form.addEventListener("submit", (e) => {
 document.addEventListener("DOMContentLoaded", (e) => {
   showInfo();
 });
+
+
+logout1.addEventListener("click", (e) => {
+  window.location.href = "/pages/home/index.html";
+});
+
