@@ -1,3 +1,33 @@
+function showSenha() {
+  var inputpass = document.getElementById("senha");
+  var btnShowPass = document.getElementById("btn-senha");
+
+  if (inputpass.type === 'password') {
+    inputpass.setAttribute('type','text');
+    btnShowPass.classList.replace('bi-eye-fill','bi-eye-slash-fill');
+  }else{
+    inputpass.setAttribute('type','password');
+    btnShowPass.classList.replace('bi-eye-slash-fill','bi-eye-fill');
+  }
+}
+
+function showSenha1() {
+  var inputpass = document.getElementById("confirmeSenha");
+  var btnShowPass = document.getElementById("btn-senha1");
+
+  if (inputpass.type === 'password') {
+    inputpass.setAttribute('type','text');
+    btnShowPass.classList.replace('bi-eye-fill','bi-eye-slash-fill');
+  }else{
+    inputpass.setAttribute('type','password');
+    btnShowPass.classList.replace('bi-eye-slash-fill','bi-eye-fill');
+  }
+}
+
+
+
+
+
 const form = document.querySelector("#form")
 form.addEventListener("submit" , (e)=>{
   e.preventDefault()

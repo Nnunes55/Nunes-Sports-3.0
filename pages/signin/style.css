@@ -4,3 +4,18 @@
     max-width: 600px;
     width: 100%;
 }
+
+.form-control{
+    font-size: 20px;
+    padding: 0px 50px 0px 20px;
+}
+
+div i{
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 1%;
+    top: 5px;
+    margin-right: 5px;
+    color: #8a8686;
+}

@@ -1,3 +1,17 @@
+function showSenha() {
+  var inputpass = document.getElementById("senha");
+  var btnShowPass = document.getElementById("btn-senha");
+
+  if (inputpass.type === 'password') {
+    inputpass.setAttribute('type','text');
+    btnShowPass.classList.replace('bi-eye-fill','bi-eye-slash-fill');
+  }else{
+    inputpass.setAttribute('type','password');
+    btnShowPass.classList.replace('bi-eye-slash-fill','bi-eye-fill');
+  }
+}
+
+
 const form = document.querySelector("#form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -15,7 +29,7 @@ form.addEventListener("submit", (e) => {
     (user) => user.email === email && user.senha === senha
   );
 
-      if (!validuser) {
+  if (!validuser) {
     return alert("Email e/ou senhas incorretos!!");
   }
 
@@ -23,3 +37,4 @@ form.addEventListener("submit", (e) => {
   localStorage.setItem("session", JSON.stringify(validuser));
   window.location.href = "pages/home/index.html";
 });
+
