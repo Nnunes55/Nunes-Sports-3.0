@@ -13,7 +13,7 @@ td button{
 }
 
 .modal-header{
-    background: #12CBB2;
+    background: #11ccb3;
     color: #ffffff;
 }
 
@@ -22,7 +22,7 @@ button i{
 }
 
 .modal-body form{
-    display: flex;
+    display: block;
     justify-content:space-between;
     align-items: center;
     padding: 0;
