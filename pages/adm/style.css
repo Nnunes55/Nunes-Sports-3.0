@@ -4,3 +4,7 @@
     max-width: 600px;
     width: 100%;
 }
+.modal-header{
+    background: #9e9c9c;
+    color: #000000;
+}
