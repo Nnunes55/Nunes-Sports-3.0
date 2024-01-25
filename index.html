@@ -18,14 +18,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
     />
-
+    <!-- Titulo da empresa -->
     <title>NunesSport</title>
-
+    <!-- Link login CSS -->
     <link rel="stylesheet" href="pages/login/style.css" />
   </head>
   <body
     class="bg-primary-subtle bg-gradient d-flex align-items-center py-4 h-100"
   >
+    <!-- Icone do cadeado bootStrap -->
     <main class="w-100 m-auto form-container">
       <form id="form" class="form">
         <svg
@@ -42,11 +43,11 @@
             .816-.781 1.3-1.5 1.3h-3c-.719 0-1.5-.484-1.5-1.3V8.3c0-.627.46-1.058 1-1.224V6a2 2 0 1 1 4 0"
           />
         </svg>
-
+        <!-- Titulo da empresa -->
         <h1 class="h2 mb-3 fw-normal text-center">NunesSport</h1>
-
+        <!-- Titulo de "entre!" -->
         <h1 class="h3 mb-3 fw-normal text-center">Entre!</h1>
-
+        <!-- Input de email -->
         <div class="form-floating mb-3">
           <input
             type="email"
@@ -56,6 +57,7 @@
           />
           <label for="floatingInput">Email</label>
         </div>
+        <!-- Input de senha -->
         <div class="form-floating mb-3">
           <input
             type="password"
@@ -66,15 +68,17 @@
           <label for="floatingInput">Senha</label>
           <i class="bi bi-eye-fill"  id="btn-senha" onclick="showSenha()"></i>
         </div>
+        <!-- Link para a pagina de signin -->
         <p class="para1">
           Não tem uma conta?<b>
             <a href="pages/signin/index.html">Cadastre-se</a></b
           >
         </p>
-
+        <!-- botão de entrar -->
         <button class="btn btn-primary w-100 py-2" type="submit">Entre</button>
       </form>
     </main>
+    <!-- Links do javaScript -->
     <script src="shared/checkLogin.js"></script>
     <script src="pages/login/script.js"></script>
   </body>
