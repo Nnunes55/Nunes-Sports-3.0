@@ -75,7 +75,6 @@
         </div>
       </section>
 
-      <div class="modal fade" id="userForm">
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
             <div class="modal-header">
@@ -97,11 +96,27 @@
                       class="container text-center"
                       type="text"
                       name=""
-                      id="name"
-                      disabled
+                      id="email1"
+                      placeholder=""
+                      
                     />
+                    <div class="modal-bod">
+                      <form action="#" id="myForm">
+                        <div class="inputFild">
+                          <div class="mt-2">
+                            <label for="name">Senha do usuario:</label> 
+                            
+                            <input
+                              class="container text-center"
+                              type="password"
+                              name=""
+                              id="password1"
+                              placeholder=""
+                              
+                            />
+                            
                   </div>
-                  <div class="mt-2 m-lg-3">
+                  <div class="mt-2">
                     <label for="codigo">Cargo do usuario:</label>
 
                     <select
@@ -120,6 +135,7 @@
 
             <div class="modal-footer">
               <button
+              id="btnup"
                 type="submit"
                 form="myForm"
                 class="btn btn-primary submit"
