@@ -73,8 +73,8 @@ function deleteInfo(index) {
   if (
     confirm("Você irá deletar permanentemente esse item! Você tem certeza?")
   ) {
-    getData.splice(index, 1);
-    localStorage.setItem("database", JSON.stringify(getData));
+    getUsers.splice(index, 1);
+    localStorage.setItem("Users", JSON.stringify(getData));
     showInfo();
   }
 }
