@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <!-- Required meta tags -->
@@ -32,9 +32,15 @@
       </nav>
     </header>
     <main class="container-fluid px-5 pt-2">
-      <section class="p-3 bg-body-secondary mt-4 rounded">
+      <section class="shadow-sm p-3 bg-body-secondary mt-4 rounded">
         <div class="row">
-          <div class="col">
+          <div class="col-6 ">
+            <button class="btn bg-secondary btn-outline-light" id="logout1">
+              <i class="bi bi-arrow-left-square"></i>
+              Voltar Cadastramento
+            </button>
+          </div>
+          <div class="col offset-2">
             <button
               class="btn bg-primary btn-outline-light"
               data-bs-toggle="modal"
@@ -43,14 +49,11 @@
               Novo usuario <i class="bi bi-bag-plus"></i>
             </button>
           </div>
+
           <div class="col">
-            <button class="btn bg-secondary btn-outline-light"  id="logout1"> <i class="bi bi-arrow-left-square"></i>
-              Voltar Cadastramento 
-            </button>
-          </div>
-          <div class="col">
-            <button class="btn bg-danger btn-outline-light" id="logout"> <i class="bi bi-people"></i>
-              Encerrar Sessão 
+            <button class="btn bg-danger btn-outline-light" id="logout">
+              <i class="bi bi-people"></i>
+              Encerrar Sessão
             </button>
           </div>
         </div>
@@ -75,6 +78,7 @@
         </div>
       </section>
 
+      <div class="modal fade" id="userForm">
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
             <div class="modal-header">
@@ -96,27 +100,19 @@
                       class="container text-center"
                       type="text"
                       name=""
-                      id="email1"
-                      placeholder=""
-                      
+                      id="name"
                     />
-                    <div class="modal-bod">
-                      <form action="#" id="myForm">
-                        <div class="inputFild">
-                          <div class="mt-2">
-                            <label for="name">Senha do usuario:</label> 
-                            
-                            <input
-                              class="container text-center"
-                              type="password"
-                              name=""
-                              id="password1"
-                              placeholder=""
-                              
-                            />
-                            
                   </div>
-                  <div class="mt-2">
+                  <div class="mt-2 m-lg-3">
+                    <label for="name">Senha do usuario:</label>
+                    <input
+                      class="container text-center"
+                      type="password"
+                      name=""
+                      id="name"
+                    />
+                  </div>
+                  <div class="mt-2 m-lg-3">
                     <label for="codigo">Cargo do usuario:</label>
 
                     <select
@@ -135,7 +131,6 @@
 
             <div class="modal-footer">
               <button
-              id="btnup"
                 type="submit"
                 form="myForm"
                 class="btn btn-primary submit"

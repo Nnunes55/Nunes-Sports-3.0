@@ -72,9 +72,9 @@ function editInfo(index, email, role) {
 function deleteInfo(index) {
   if (
     confirm("Você irá deletar permanentemente esse item! Você tem certeza?")
-  ) {
+  ) {   
     getUsers.splice(index, 1);
-    localStorage.setItem("Users", JSON.stringify(getData));
+    localStorage.setItem("users", JSON.stringify(getUsers));
     showInfo();
   }
 }
