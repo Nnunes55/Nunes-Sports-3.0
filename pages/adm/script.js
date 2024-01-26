@@ -1,5 +1,6 @@
 var form = document.getElementById("myForm"),
   userName = document.getElementById("name"),
+  senha1 = document.getElementById("senha"),
   codigo = document.getElementById("codigo"),
   descricao = document.getElementById("descricao"),
   preco = document.getElementById("preco"),
@@ -55,15 +56,17 @@ function showInfo() {
   });
 }
 
-function readInfo(email, role) {
+function readInfo(email, senha, role ) {
   (document.querySelector("#showEmail").value = email),
+  (document.querySelector("#showSenha").value = senha),
     (document.querySelector("#showRole").value = role)
 }
 
-function editInfo(index, email, role) {
+function editInfo(index, email, senha, role) {
   isEdit = true;
   editId = index;
   userName.value = email;
+  senha1.value = senha;
   codigo.value = role;
   submitBtn.innerText = "Enviar";
   modalTitle.innerText = "Altere os dados";
