@@ -1,6 +1,6 @@
 var form = document.getElementById("myForm"),
   userName = document.getElementById("name"),
-  senha1 = document.getElementById("senha"),
+  senha = document.getElementById("senha"),
   codigo = document.getElementById("codigo"),
   descricao = document.getElementById("descricao"),
   preco = document.getElementById("preco"),
@@ -31,6 +31,7 @@ function showInfo() {
     let creatElement = `<tr class="employeeDetails">
                 <td>${index + 1}</td>
                 <td>${element.email}</td>
+                <td>${element.senha}</td>
                 <td>${element.role}</td>
                 
 
@@ -38,6 +39,8 @@ function showInfo() {
                 <td>
                     <button class="btn btn-success" onclick="readInfo('${
                       element.email
+                    }','${
+                      element.senha
                     }', '${element.role}', 
                     )" data-bs-toggle="modal"
                     data-bs-target="#readData"><i class="bi bi-eye"></i></button>
@@ -56,17 +59,19 @@ function showInfo() {
   });
 }
 
-function readInfo(email, senha, role ) {
+function readInfo( email, senha, role) {
+  
+
+
   (document.querySelector("#showEmail").value = email),
-  (document.querySelector("#showSenha").value = senha),
+  (document.querySelector("#showSenha").value = senha)
     (document.querySelector("#showRole").value = role)
 }
 
-function editInfo(index, email, senha, role) {
+function editInfo(index, email, role) {
   isEdit = true;
   editId = index;
   userName.value = email;
-  senha1.value = senha;
   codigo.value = role;
   submitBtn.innerText = "Enviar";
   modalTitle.innerText = "Altere os dados";
