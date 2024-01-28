@@ -29,7 +29,7 @@ Objetivo principal será identificar:
 * Para melhor edição da página foi inserido a biblioteca "Bootstrap" para ajudar na estilização do site.
 * Todas as ações foram colocadas no LocalStorage, que serve como o bando de dados.
 
-## Tela de Signin:
+## Tela de cadastro:
 
 * Para criação de email existe regras de validação:
 1) O email não pode ser vazio.
@@ -37,20 +37,20 @@ Objetivo principal será identificar:
 * Para criação de senha existe regras de validação:
 1) A senha não pode ser vazia.
 2) A senha tem que possuir mais que 4 caracteres.
-3) A senha e confirme senha tem que serem identicas para criação do usuario.
+3) A senha e confirme senha tem que serem idênticas para criação do usuário.
 
 ![Signin](https://github.com/Freitas-gui/Calisthenics-Movements/assets/145817464/c51e4e1f-fcc1-43c4-9636-c6f9b9c828b2)
  
 ## Tela de Login:
 
-* Para acessar a parte adiministrativa do site use o **email:" admin@admin.com " e a senha: " admin "**.
-* Para entrar como usuario insira o email e senha cadastrados na pagina de signin.
-* Se não tiver uma conta cadastrada pode clicar no link "Cadastre-se" que será redirecionado a pagina de signin
+* Para acessar a parte administrativa do site use o **email:" admin@admin.com " e a senha: " admin "**.
+* Para entrar como usuário insira o email e senha cadastrados na página de cadastro.
+* Se não tiver uma conta cadastrada pode clicar no link "Cadastre-se" que será redirecionado a página de cadastro.
 ![Entre_admin](https://github.com/Freitas-gui/Calisthenics-Movements/assets/145817464/2e1ac758-ec63-4d52-9e05-93661614f2dc)
 
 ## Pagina inicial:
 
-* Se estiver como adiministrativo ira ver que o primeiro botão leva para a parte adiministrativa do site.
+* Se estiver como administrativo ira ver que o primeiro botão leva para a parte administrativa do site.
 * Logo em seguida ira ver o botão de cadastrar um novo produto em azul.
 * Logo em seguida ira ver o botão de sair da sessão.
 * Em cada linha da tabela existe 3 botões:
