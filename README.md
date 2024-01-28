@@ -90,12 +90,12 @@ Objetivo principal será identificar:
 </table>
 
 ## Salesforce:
-* Ranger em salesforce.
-* Aprendi a criar contas e contatos.
+* Ranger em Salesforce.
+* Aprendi a criar registros.
 * Gerenciar usuarios.
 * Criar objetos personalizados.
 * Gerenciar dados.
 * Criar e gerenciar flows.
 * Criar relatorios.
-* Criar fórmulas de validação.
+* Criar regras de validação.
 ![WhatsApp Image 2024-01-27 at 19 40 13](https://github.com/Nnunes55/Nunes-Sports-3.0/assets/145817464/e4e2b6d5-b5df-4772-8745-860939e462a5)
