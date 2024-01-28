@@ -9,7 +9,7 @@ var form = document.getElementById("myForm"),
   modal = document.getElementById("userForm"),
   modalTitle = document.querySelector("#userForm .modal-title");
 
-  const logout1 = document.getElementById("logout1")
+const logout1 = document.getElementById("logout1");
 
 let getData = localStorage.getItem("database")
   ? JSON.parse(localStorage.getItem("database"))
@@ -39,9 +39,7 @@ function showInfo() {
                 <td>
                     <button class="btn btn-success" onclick="readInfo('${
                       element.email
-                    }','${
-                      element.senha
-                    }', '${element.role}', 
+                    }','${element.senha}', '${element.role}', 
                     )" data-bs-toggle="modal"
                     data-bs-target="#readData"><i class="bi bi-eye"></i></button>
 
@@ -59,13 +57,11 @@ function showInfo() {
   });
 }
 
-function readInfo( email, senha, role) {
-  
-
-
+function readInfo(email, senha, role) {
   (document.querySelector("#showEmail").value = email),
-  (document.querySelector("#showSenha").value = senha)
-    (document.querySelector("#showRole").value = role)
+    (document.querySelector("#showSenha").value = senha)(
+      (document.querySelector("#showRole").value = role)
+    );
 }
 
 function editInfo(index, email, role) {
@@ -80,7 +76,7 @@ function editInfo(index, email, role) {
 function deleteInfo(index) {
   if (
     confirm("Você irá deletar permanentemente esse item! Você tem certeza?")
-  ) {   
+  ) {
     getUsers.splice(index, 1);
     localStorage.setItem("users", JSON.stringify(getUsers));
     showInfo();
@@ -89,15 +85,13 @@ function deleteInfo(index) {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const actualUser = getUsers.find(
-    (user) => user.email === userName.value
-  );
-  console.log(actualUser)
+  const actualUser = getUsers.find((user) => user.email === userName.value);
+  console.log(actualUser);
   const information = {
     email: userName.value,
     role: codigo.value,
     senha: actualUser.senha,
-    confirmeSenha: actualUser.confirmeSenha
+    confirmeSenha: actualUser.confirmeSenha,
   };
 
   if (!isEdit) {
@@ -124,8 +118,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
   showInfo();
 });
 
-
 logout1.addEventListener("click", (e) => {
   window.location.href = "/pages/home/index.html";
 });
-
