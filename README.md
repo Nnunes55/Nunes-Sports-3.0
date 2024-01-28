@@ -7,7 +7,7 @@
 ## Os desafios foram:
 
 + Definir o modelo de entrega ✅
-+ Ultilizar ferramentas do mercado atuais ✅
++ Utilizar ferramentas do mercado atuais ✅
 + Desenvolver um sistema para exibição, criação, edição, deleção dos produtos ✅
 + Base de dados com uma tabela com os campos: nome do produto, código do produto, descrição do produto, preço do produto ✅
 + Criar uma página web para CRUD de produtos ✅
