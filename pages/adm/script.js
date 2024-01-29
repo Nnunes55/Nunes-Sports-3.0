@@ -10,6 +10,7 @@ var form = document.getElementById("myForm"),
   modalTitle = document.querySelector("#userForm .modal-title");
 
 const logout1 = document.getElementById("logout1");
+const novoUsuario = document.getElementById("novoUsuario");
 
 let getData = localStorage.getItem("database")
   ? JSON.parse(localStorage.getItem("database"))
@@ -31,7 +32,7 @@ function showInfo() {
     let creatElement = `<tr class="employeeDetails">
                 <td>${index + 1}</td>
                 <td>${element.email}</td>
-                <td>${element.senha}</td>
+                
                 <td>${element.role}</td>
                 
 
@@ -39,7 +40,7 @@ function showInfo() {
                 <td>
                     <button class="btn btn-success" onclick="readInfo('${
                       element.email
-                    }','${element.senha}', '${element.role}', 
+                    }', '${element.role}', 
                     )" data-bs-toggle="modal"
                     data-bs-target="#readData"><i class="bi bi-eye"></i></button>
 
@@ -59,9 +60,7 @@ function showInfo() {
 
 function readInfo(email, senha, role) {
   (document.querySelector("#showEmail").value = email),
-    (document.querySelector("#showSenha").value = senha)(
-      (document.querySelector("#showRole").value = role)
-    );
+    (document.querySelector("#showRole").value = role);
 }
 
 function editInfo(index, email, role) {
@@ -71,6 +70,7 @@ function editInfo(index, email, role) {
   codigo.value = role;
   submitBtn.innerText = "Enviar";
   modalTitle.innerText = "Altere os dados";
+  senha.parentElement.style.display = "none";
 }
 
 function deleteInfo(index) {
@@ -85,20 +85,27 @@ function deleteInfo(index) {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const actualUser = getUsers.find((user) => user.email === userName.value);
-  console.log(actualUser);
-  const information = {
-    email: userName.value,
-    role: codigo.value,
-    senha: actualUser.senha,
-    confirmeSenha: actualUser.confirmeSenha,
-  };
 
-  if (!isEdit) {
-    getUsers.push(information);
-  } else {
+  if (isEdit) {
+    const actualUser = getUsers.find((user) => user.email === userName.value);
+    const information = {
+      email: userName.value,
+      role: codigo.value,
+      senha: actualUser.senha,
+      confirmeSenha: actualUser.confirmeSenha,
+    };
     isEdit = false;
+    senha.parentElement.style.display = "";
     getUsers[editId] = information;
+  } else {
+    const information = {
+      email: userName.value,
+      role: codigo.value,
+      senha: senha.value,
+      confirmeSenha: senha.value,
+    };
+
+    getUsers.push(information);
   }
 
   localStorage.setItem("users", JSON.stringify(getUsers));
@@ -116,6 +123,11 @@ form.addEventListener("submit", (e) => {
 
 document.addEventListener("DOMContentLoaded", (e) => {
   showInfo();
+});
+
+novoUsuario.addEventListener("click", (e) => {
+  isEdit = false;
+  senha.parentElement.style.display = "";
 });
 
 logout1.addEventListener("click", (e) => {
