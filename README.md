@@ -74,20 +74,10 @@ Objetivo principal será identificar:
 
 ## Tecnologias usadas:
 
-<table>
-  <tr>
-    <td>Bootstrap</td>
-    <td>Html</td>
-    <td>Css</td>
-    <td>JavaScript</td>
-  </tr>
-  <tr>
-    <td>9.0</td>
-    <td>9.0</td>
-    <td>2.0</td>
-    <td>8.0</td>
-  </tr>
-</table>
+* HTML
+* JavaScript
+* CSS
+* BootStrap
 
 ## Salesforce:
 * Ranger em Salesforce.
