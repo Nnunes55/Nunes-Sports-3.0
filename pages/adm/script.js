@@ -131,5 +131,5 @@ novoUsuario.addEventListener("click", (e) => {
 });
 
 logout1.addEventListener("click", (e) => {
-  window.location.href = "/pages/home/index.html";
+  window.location.href = "Nunes-Sports-3.0/pages/adm/index.html";
 });
