@@ -9,7 +9,7 @@ var form = document.getElementById("myForm"),
   modal = document.getElementById("userForm"),
   modalTitle = document.querySelector("#userForm .modal-title");
 
-const logout1 = document.getElementById("logout1");
+/* const logout1 = document.getElementById("logout1"); */
 const novoUsuario = document.getElementById("novoUsuario");
 
 let getData = localStorage.getItem("database")
