@@ -58,7 +58,7 @@ function showInfo() {
   });
 }
 
-function readInfo(email, senha, role) {
+function readInfo(email, role) {
   (document.querySelector("#showEmail").value = email),
     (document.querySelector("#showRole").value = role);
 }
@@ -130,6 +130,6 @@ novoUsuario.addEventListener("click", (e) => {
   senha.parentElement.style.display = "";
 });
 
-logout1.addEventListener("click", (e) => {
+/* logout1.addEventListener("click", (e) => {
   window.location.href = "Nunes-Sports-3.0/pages/adm/index.html";
-});
+}); */
