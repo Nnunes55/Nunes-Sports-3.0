@@ -9,7 +9,6 @@ var form = document.getElementById("myForm"),
   modal = document.getElementById("userForm"),
   modalTitle = document.querySelector("#userForm .modal-title");
 
-/* const logout1 = document.getElementById("logout1"); */
 const novoUsuario = document.getElementById("novoUsuario");
 
 let getData = localStorage.getItem("database")
@@ -75,7 +74,7 @@ function editInfo(index, email, role) {
 
 function deleteInfo(index) {
   if (
-    confirm("Você irá deletar permanentemente esse item! Você tem certeza?")
+    confirm("Você irá deletar permanentemente esse usuario! Você tem certeza?")
   ) {
     getUsers.splice(index, 1);
     localStorage.setItem("users", JSON.stringify(getUsers));
@@ -130,6 +129,4 @@ novoUsuario.addEventListener("click", (e) => {
   senha.parentElement.style.display = "";
 });
 
-/* logout1.addEventListener("click", (e) => {
-  window.location.href = "Nunes-Sports-3.0/pages/adm/index.html";
-}); */
+
