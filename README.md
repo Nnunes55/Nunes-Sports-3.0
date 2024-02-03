@@ -60,7 +60,7 @@ Objetivo principal será identificar:
   ![Pagina_inicial](https://github.com/Freitas-gui/Calisthenics-Movements/assets/145817464/00d926c8-76aa-405b-8c59-1bbe669b16dd)
 
 
-## Pagina adiministrativa: 
+## Pagina administrativa: 
 
 * Na pagina adiministrativa, o primeiro botão da parte de cima leva de volta a pagina de cadastramento de produtos.
 * O segundo botão insere um novo usuario na tabela e no LocalStorage.
