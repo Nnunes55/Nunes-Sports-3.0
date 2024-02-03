@@ -1,8 +1,8 @@
 # Nunes-Sports-3.0
 
-> Status: Desenvolvendo ⚠️
+> Status: Finalizado ✅
 
-### NunesSport é uma aplicação em HTML feita referente ao desafio proposto da Everymind.
+### NunesSport é uma aplicação em HTML feita referente ao desafio proposto pela Everymind.
 
 ## Os desafios foram:
 
@@ -60,7 +60,7 @@ Objetivo principal será identificar:
   ![Pagina_inicial](https://github.com/Freitas-gui/Calisthenics-Movements/assets/145817464/00d926c8-76aa-405b-8c59-1bbe669b16dd)
 
 
-## Pagina adiministrativa: 
+## Pagina administrativa: 
 
 * Na pagina adiministrativa, o primeiro botão da parte de cima leva de volta a pagina de cadastramento de produtos.
 * O segundo botão insere um novo usuario na tabela e no LocalStorage.
@@ -88,4 +88,4 @@ Objetivo principal será identificar:
 * Criar e gerenciar flows.
 * Criar relatorios.
 * Criar regras de validação.
-![WhatsApp Image 2024-01-27 at 19 40 13](https://github.com/Nnunes55/Nunes-Sports-3.0/assets/145817464/e4e2b6d5-b5df-4772-8745-860939e462a5)
+![WhatsApp Image 2024-02-02 at 21 29 04](https://github.com/Nnunes55/Nunes-Sports-3.0/assets/145817464/59002b81-363f-4234-b691-fde61d63e304)
