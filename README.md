@@ -1,6 +1,6 @@
 # Nunes-Sports-3.0
 
-> Status: Desenvolvendo ⚠️
+> Status: Finalizado ✅
 
 ### NunesSport é uma aplicação em HTML feita referente ao desafio proposto da Everymind.
 
