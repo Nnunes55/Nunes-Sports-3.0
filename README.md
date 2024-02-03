@@ -2,7 +2,7 @@
 
 > Status: Finalizado ✅
 
-### NunesSport é uma aplicação em HTML feita referente ao desafio proposto da Everymind.
+### NunesSport é uma aplicação em HTML feita referente ao desafio proposto pela Everymind.
 
 ## Os desafios foram:
 
